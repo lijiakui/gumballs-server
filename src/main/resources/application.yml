@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: gumballs
+datasource:
+  readSize: 2
+  type: com.alibaba.druid.pool.DruidDataSource
+  write:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rdsxv7046zt3896w2b81o.mysql.rds.aliyuncs.com:3306/gumballs
+    username: ljk
+    password: lijiakui861224
+    initialSize: 1
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'X'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+  read:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rdsxv7046zt3896w2b81o.mysql.rds.aliyuncs.com:3306/gumballs
+    username: ljk
+    password: lijiakui861224
+    initialSize: 1
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'X'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+server:
+  port: 8001
+#  tomcat重HTTP头信息中去获取协议信息
+  tomcat:
+    remote-ip-header: x-forwarded-for
+  use-forward-headers: true
+
+#  ssl:
+#    key-store: classpath:keystore.p12
+#    key-store-password: lijiakui861224
+#    key-store-type: PKCS12
+#    key-alias: tomcat
+mybatis:
+  type-aliases-package: com.jack.*.domain.model
+  mapper-locations: classpath:mapper/*.xml
+
+

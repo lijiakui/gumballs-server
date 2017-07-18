@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+<classPathEntry    location="/Users/jiakuili/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar" />
+  <context id="context1" >
+    <!-- 注释 -->
+    <commentGenerator >
+      <property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->
+      <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->
+    </commentGenerator>
+    
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"  connectionURL="jdbc:mysql://rdsxv7046zt3896w2b81o.mysql.rds.aliyuncs.com:3306/gumballs" userId="ljk" password="lijiakui861224" />
+
+    <javaModelGenerator targetPackage="com.jack.gumballs.domain.model" targetProject="/Users/jiakuili/Desktop/work/weixin/gumballs-server/src/main/java" />
+    <sqlMapGenerator targetPackage="mapper" targetProject="/Users/jiakuili/Desktop/work/weixin/gumballs-server/src/main/resources" />
+    <javaClientGenerator targetPackage="com.jack.gumballs.mapper" targetProject="/Users/jiakuili/Desktop/work/weixin/gumballs-server/src/main/java" type="XMLMAPPER" />
+
+
+    <table schema=""  tableName="guides" domainObjectName="Guides" enableCountByExample="true" enableUpdateByExample="true"
+           enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">
+
+    </table>
+  </context>
+</generatorConfiguration>
